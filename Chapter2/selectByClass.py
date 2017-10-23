@@ -7,3 +7,4 @@ bsObj = BeautifulSoup(html)
 nameList = bsObj.findAll('span', {'class': 'green'})
 for name in nameList:
     print(name.get_text())
+
