@@ -1,5 +1,5 @@
 from urllib.request import urlopen
-from bs4 import HTTPError
+from urllib.error import HTTPError
 
 
 try:
