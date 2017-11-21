@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from collections import OrderedDict
 import re
 import string
+import pprint
 
 
 def cleanInput(input):
@@ -38,5 +39,5 @@ bsObj = BeautifulSoup(html, 'html.parser')
 content = bsObj.find('div', {'id': 'mw-content-text'}).get_text()
 ngrams = getNgrams(content, 2)
 ngrams = OrderedDict(sorted(ngrams.items(), key=lambda t: t[1], reverse=True))
-print(ngrams)
+pprint.pprint(ngrams)
 print('2-grams count is: ' + str(len(ngrams)))
