@@ -4,7 +4,7 @@ driver = webdriver.PhantomJS(executable_path='D:\\phantomjs-2.1.1-windows\\bin\\
 driver.get('http://pythonscraping.com/pages/itsatrap.html')
 links = driver.find_elements_by_tag_name('a')
 for link in links:
-    if not link.is_displayed():
+    if not link.is_ displayed():
         print('The link' + link.get_attribute('href') + 'is a trap')
 
 fields = driver.find_elements_by_tag_name('input')
